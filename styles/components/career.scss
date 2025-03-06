@@ -1,0 +1,593 @@
+.career{
+  &__inner{
+    padding: 24px 0 50px 0;
+  }
+  &__tabs{
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    span{
+      display: block;
+      color: $black-color;
+      font-size: 16px;
+      font-weight: 400;
+      transition: 0.25s;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+      & + span{
+        margin-left: 16px;
+      }
+    }
+    .active{
+      color: $main-color;
+      border-bottom: 2px solid $main-color;
+    }
+  }
+}
+
+.program{
+  &-main__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 50px 0;
+    .info, .img{
+      width: calc(50% - 12px);
+    }
+    .info{
+      h3{
+        font-size: 32px;
+        color: $black-color;
+        margin: 0;
+        font-weight: 500;
+        line-height: 38px;
+        span{
+          color: $main-color;
+        }
+      }
+      p{
+        margin: 12px 0 0 0;
+        color: $grey-text;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+    .img{
+      &>img{
+        width: 100%;
+      }
+    }
+  }
+  &-about{
+    background: #1D1D1B;
+  }
+  &-about__inner{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    .info, .cards{
+      width: calc(50% - 12px);
+      color: $white;
+    }
+    .info{
+      h3{
+        margin: 0;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30px;
+      }
+      p{
+        margin: 10px 0 0 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+      ul{
+        margin: 10px 0 0 0;
+        padding-left: 15px;
+        list-style: disc;
+        li{
+          font-size: 16px;
+          font-weight: 400;
+          & + li{
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+    .cards{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -24px;
+      .card{
+        width: calc(50% - 12px);
+        border-radius: 0px 24px;
+        background: #343434;
+        margin-bottom: 24px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &:nth-child(odd){
+          margin-right: 24px;
+        }
+        span{
+          font-size: 24px;
+          font-weight: 500;
+        }
+        p{
+          margin: 16px 0 0 0;
+          color: $main-color;
+          font-size: 32px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &-invests__inner{
+    padding: 50px 0;
+    .info{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      h3,p{
+        width: calc(50% - 12px);
+        margin: 0;
+        color: $black-color
+      }
+      h3{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30px;
+      }
+      p{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        p{
+          width: 100%;
+        }
+      }
+    }
+    .cards{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+      .card{
+        border-radius: 0px 24px;
+        background:#F8F8F7;
+        width: calc(33.333% - 16px);
+        padding: 24px;
+        color: $black-color;
+        .icon{
+          width: 90px;
+          height: 87px;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        &:last-child{
+          background: $main-light-color;
+        }
+        span{
+          display: block;
+          margin-top: 16px;
+          font-size: 24px;
+          font-weight: 500;
+        }
+        p{
+          margin: 10px 0 0 0;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.vacancy{
+  &__inner{
+    padding: 20px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__content{
+    width: calc(100% - 416px);
+  }
+  &__contacts{
+    width: 392px;
+    .card{
+      background: $main-light-color;
+      padding: 24px;
+      border-radius: 0px 30px;
+      margin-top: 20px;
+      width: 100%;
+      a{
+        display: block;
+        display: flex;
+        align-items: center;
+        color: $black-color;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        svg{
+          margin-right: 6px;
+          width: 24px;
+          height: 24px;
+        }
+        & + a{
+          margin-top: 20px;
+        }
+        span{
+          display: flex;
+          align-items: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__card{
+    margin-top: 20px;
+    border-radius: 0px 30px;
+    background:#F8F8F7;
+    padding: 24px;
+    p{
+      margin: 0 0 8px 0;
+      color: $black-color;
+    }
+    .position{
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .salary{
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .description{
+      font-size: 16px;
+      font-weight: 400;
+      ul{
+        display: none;
+      }
+    }
+    .flex{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      div{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        svg{
+          margin-right: 6px;
+        }
+      }
+    }
+    button{
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  }
+  &__filter{
+    margin-top: 20px;
+    select{
+      height: 32px;
+      padding-left: 8px;
+      padding-right: 34px;
+      border: none;
+      background-color: $bg;
+      font-size: 16px;
+      font-weight: 500;
+      appearance: none;
+      background-image: url('~/images/arrow-down-select.svg');
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      background-position: right center;
+      background-position-x: calc(100% - 8px);
+      & + select{
+        margin-left: 16px;
+      }
+    }
+  }
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    align-items: flex-start;
+    &__wrap{
+      width: calc(100% - (392px + 24px));
+      h3{
+        font-size: 24px;
+        font-weight: 600;
+        color: $black-color;
+      }
+      h4{
+        margin-top: 8px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .flex{
+        &>div{
+          margin-top: 12px;
+          display: flex;
+          align-items: center;
+          svg,img{
+            margin-right: 6px;
+          }
+        }
+      }
+      .block{
+        margin-top: 16px;
+        .title{
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 8px;
+          line-height: normal;
+        }
+        .description{
+          font-size: 16px;
+          line-height: 125%;
+        }
+        ul{
+          list-style: disc;
+          padding-left: 15px;
+          li{
+            font-size: 16px;
+            color: $black-color;
+            line-height: 125%;
+          }
+        }
+      }
+    }
+    &__form{
+      width: 392px;
+      background: #FFF;
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+      padding: 24px;
+      .title{
+        font-size: 18px;
+        line-height: normal;
+      }
+      .description{
+        margin-top: 8px;
+        color: #8A8B8A;
+        font-size: 14px;
+        line-height: 125%;
+      }
+      .text-field{
+        margin-top: 20px;
+        label{
+          display: block;
+          font-size: 14px;
+          color: $black-color;
+          margin-bottom: 4px;
+          line-height: normal;
+        }
+        input{
+          width: 100%;
+          height: 48px;
+          border: 1px solid #E4E4E3;
+          background: #F8F8F7;
+          padding-left: 12px;
+          padding-right: 12px;
+          font-size: 16px;
+        }
+        .error-message{
+          display: block;
+          margin-top: 4px;
+          font-size: 13px;
+          font-weight: 500;
+          color: #d20000;
+        }
+      }
+      .main-button{
+        margin-top: 20px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        height: 48px;
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1180px){
+  .vacancy{
+    &__content{
+      width: calc(100% - 364px);
+    }
+    &__contacts{
+      width: 340px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .vacancy{
+    &__content{
+      width: calc(100% - 324px);
+    }
+    &__contacts{
+      width: 300px;
+    }
+    &-inner{
+      &__wrap{
+        width: calc(100% - (350px + 24px));
+      }
+      &__form{
+        width: 350px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .career{
+    &__inner{
+      padding: 20px 0 36px 0;
+    }
+  }
+
+  .program{
+    &-main__inner{
+      flex-direction: column;
+      padding: 16px 0 36px 0;
+      .info{
+        width: 100%;
+        h3{
+          font-size: 24px;
+          line-height: 125%;
+          span{
+            display: block;
+          }
+        }
+      }
+      .img{
+        width: 100%;
+        margin-top: 24px;
+      }
+    }
+    &-about__inner{
+      flex-direction: column;
+      padding: 36px 0;
+      .info{
+        width: 100%;
+        h3{
+          font-size: 20px;
+        }
+        p{
+          font-size: 14px;
+        }
+        ul{
+          li{
+            font-size: 14px;
+          }
+        }
+      }
+      .cards{
+        width: 100%;
+        margin-top: 20px;
+        justify-content: space-between;
+        margin-bottom: -12px;
+        .card{
+          width: calc(50% - 6px);
+          margin-bottom: 12px;
+          padding: 12px;
+          margin-right: 0 !important;
+          span{
+            font-size: 20px;
+          }
+          p{
+            font-size: 24px;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+    &-invests__inner{
+      padding: 36px 0 0 0;
+      .info{
+        flex-direction: column;
+        h3{
+          width: 100%;
+          font-size: 20px;
+          line-height: 26px;
+          font-weight: 600;
+        }
+        p{
+          width: 100%;
+          margin-top: 8px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      .cards{
+        flex-direction: column;
+        margin-top: 0;
+        .card{
+          width: 100%;
+          margin-top: 20px;
+          padding: 20px;
+          span{
+            font-size: 20px;
+            font-weight: 600;
+          }
+          p{
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .vacancy{
+    &__inner{
+      padding: 16px 0 0 0;
+      flex-direction: column-reverse;
+      .title{
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 700;
+      }
+    }
+    &__filter{
+      margin-top: 16px;
+    }
+    &__card{
+      margin-top: 16px;
+      padding: 20px;
+      .position{
+        font-size: 14px;
+      }
+      .salary{
+        font-size: 16px;
+      }
+      .description{
+        font-size: 14px;
+        line-height: 18px;
+      }
+      .flex{
+        flex-direction: column;
+        div{
+          font-size: 14px;
+        }
+      }
+      button{
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+    &__contacts{
+      width: 100%;
+      .card{
+        padding: 20px;
+      }
+    }
+    &__content{
+      margin-top: 24px;
+      width: 100%;
+    }
+    &-inner{
+      flex-direction: column;
+      &__wrap{
+        width: 100%;
+      }
+      &__form{
+        width: 100%;
+        margin-top: 24px;
+        max-width: 392px;
+      }
+    }
+  }
+}

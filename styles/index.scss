@@ -1,0 +1,146 @@
+@import "./_variables.scss";
+@import "./fonts.scss";
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/contacts.scss";
+@import "./components/career.scss";
+@import "./components/partner.scss";
+@import "./components/about.scss";
+@import "./components/catalog.scss";
+@import './components/press.scss';
+
+* {
+  font-family: "FF Good Pro";
+  outline: none !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1224px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button{
+  cursor: pointer;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: $black-color;
+  line-height: 30px;
+  margin: 0;
+}
+
+@media (max-width: 767px){
+  .title{
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.main-button {
+  background: $main-color;
+  border: none;
+  height: 40px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $black-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  svg{
+    margin-right: 8px;
+  }
+}
+
+.main-light-button {
+  background: $main-light-color;
+  border: none;
+  height: 40px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $main-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg{
+    margin-right: 8px;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    a {
+      text-decoration: none;
+      color: $black-color;
+    }
+    &:last-child {
+      color: $disabled;
+    }
+    & + li {
+      margin-left: 24px;
+      &::before {
+        content: "";
+        background-image: url("../images/arrow-right.svg");
+        color: $black-color;
+        position: absolute;
+        left: -22px;
+        top: 0;
+        height: 17px;
+        width: 17px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1248px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+}

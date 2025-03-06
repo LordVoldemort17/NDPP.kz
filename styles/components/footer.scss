@@ -1,0 +1,60 @@
+.footer {
+  background: #1d1d1b;
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      width: calc(25% - 18px);
+      & > p {
+        font-size: 16px;
+        color: $white;
+        margin: 0;
+        font-weight: 400;
+      }
+      & > a {
+        display: block;
+        margin-top: 12px;
+        color: $white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    .logo {
+      width: 163px;
+      height: 34px;
+    }
+    .company {
+      margin-top: 24px;
+      p {
+        color: $white;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
+        a {
+          color: white;
+        }
+        & + p {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 36px 0;
+    &__inner {
+      flex-direction: column;
+      gap: 16px;
+      & > div {
+        width: 100%;
+        &>p{
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
